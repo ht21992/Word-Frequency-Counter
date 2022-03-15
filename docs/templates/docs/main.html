@@ -1,0 +1,63 @@
+{% extends 'base.html '%}
+{% load static %}
+{% block title %}
+Word Frequency Counter
+{% endblock title %}
+
+
+{% block content %}
+<!-- Just an image -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="https://ht21992.pythonanywhere.com">
+    <img src="{% static 'images/logo.png' %}" width="30" height="30" alt="Hossein Tajfirouz">
+  </a>
+</nav>
+<h1 class="display-1" style="margin:20px 10px;text-align:center">Word Frequency Counter</h1>
+
+<form action="upload/" method="POST" class="dropzone dz" id="MyDropZone">
+  {% csrf_token %}
+  <div class="fallback">
+    <input name="file" type="file" multiple />
+  </div>
+</form>
+<p style="margin-top:10px" id="loading" class="LoadingText"></p>
+<p style="margin-top:10px" id="Total_Number"></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h3 id="table_title"></h3>
+      <table class="Table WordsTable" style="visibility: hidden,text-align: center;">
+      </table>
+      <h3 style="margin-top:10px" id="word_type_table_title"></h3>
+      <table class="Table TagTable"  style="visibility: hidden,text-align: center;margin-bottom:10px">
+
+      </table>
+    </div>
+    <div class="col">
+      <div style="margin-top:20px"  id="bar-chart-container">
+        <canvas id="WordChart" style="width:100%;max-width:600px"></canvas>
+      </div>
+      <div style="margin-top:20px" id="pie-chart-container">
+        <canvas id="PieChart" style="width:100%;max-width:600px"></canvas>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+
+</script>
+{% endblock content %}
+
+

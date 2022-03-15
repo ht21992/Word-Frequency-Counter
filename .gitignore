@@ -1,0 +1,8 @@
+# file: ~/.gitignore_global
+.idea
+
+# Django #
+__pycache__
+*.log
+*.pot
+*.pyc

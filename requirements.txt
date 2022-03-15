@@ -1,0 +1,4 @@
+python_docx==0.8.11
+nltk==3.6.5
+Django==3.2.3
+docx==0.2.4
