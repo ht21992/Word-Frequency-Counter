@@ -95,8 +95,9 @@ def count_words(file):
 def count_words_in_table(table):
     words = 0
     try:
-        for row in table.rows:
-            words += len(row.cells[0].text.split())
+        for i in range(len(table.rows)):
+            for row in table.rows:
+                words += len(row.cells[i].text.split())
     except IndexError:
         print("Index Error")
     # print(words)
